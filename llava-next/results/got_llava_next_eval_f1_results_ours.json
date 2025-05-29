@@ -1,0 +1,19 @@
+{
+    "Chinese": {
+        "Total GT Chars": 1184,
+        "Total Pred Chars": 1450,
+        "Total Correct Chars": 0,
+        "Character Precision": 0.0,
+        "Character Recall": 0.0,
+        "Character F1 Score": 0
+    },
+    "English": {
+        "Total GT Chars": 1335,
+        "Total Pred Chars": 1495,
+        "Total Correct Chars": 1188,
+        "Character Precision": 0.7946,
+        "Character Recall": 0.8899,
+        "Character F1 Score": 0.8396
+    },
+    "Average Character F1 Score": 0.4198
+}
