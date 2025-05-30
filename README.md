@@ -23,7 +23,7 @@ This repository provides the official PyTorch implementation of the following pa
 
 ## Overview
 
-<p align="center"><img src="image/method.png" alt="teaser" width="500px" /></p>
+<p align="center"><img src="image/method.png" alt="teaser" width="800px" /></p>
 
   Large Multimodal Models (LMMs) have achieved impressive progress in visualperception and reasoning. However, when confronted with visually ambiguous ornon-semantic scene text, they often struggle to accurately spot and understand thecontent, frequently generating semantically plausible yet visually incorrect answers,which we refer to as semantic hallucination. In this work, we investigate the un-derlying causes of semantic hallucination and identify a key finding: Transformerlayers in LLM with stronger attention focus on scene text regions are less prone to producing semantic hallucinations. Thus, we propose a training-free semantic hal-lucination mitigation framework comprising two key components: (1) ZoomText,a coarse-to-fine strategy that identifies potential text regions without external detec-tors; and (2) Grounded Layer Correction, which adaptively leverages the internalrepresentations from layers less prone to hallucination to guide decoding, correct-ing hallucinated outputs for non-semantic samples while preserving the semanticsof meaningful ones. To enable rigorous evaluation, we introduce TextHalu-Bench,a benchmark of over 1,730 samples spanning both semantic and non-semanticcases, with manually curated question–answer pairs designed to probe model hallu-cinations. Extensive experiments demonstrate that our method not only effectivelymitigates semantic hallucination but also achieves strong performance on publicbenchmarks for scene text spotting and understanding.
 
@@ -90,5 +90,5 @@ We use [Vlmkit](https://github.com/open-compass/VLMEvalKit) to evaluate the Text
 
 ###  Experiment's Results
 
-<p align="center"><img src="image/experiment.png" alt="teaser" width="500px" /></p>
+<p align="center"><img src="image/experiment.png" alt="teaser" width="800px" /></p>
 
