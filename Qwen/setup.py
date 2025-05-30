@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="qwen-transformers",
-    version="0.1.0",
+    name="transformers",
+    version="9.99.0",
     description="Qwen-customized Transformers fork.",
     author="shuyansy",
     packages=find_packages(where="transformers"),
