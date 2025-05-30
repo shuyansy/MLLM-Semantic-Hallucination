@@ -63,45 +63,32 @@ pip install .
 
 ### TextHalu-Bench
 
-- Generate the MLLM's responses and save them in a jsonl file:
+- Download the TexHalu-Bench in ./eval and unzip it.
 ```bash
-python chair_llava.py
-```
-<!-- Note: Please check out our released results in `log/chair_eval_results` for reproduction. -->
-
-- Calculate CHAIR using the generated jsonl file:
-```bash
-python chair.py --cap_file /path/to/jsonl --image_id_key image_id --caption_key caption --coco_path /path/to/COCO/annotations_trainval2014/annotations/ --save_path /path/to/save/jsonl
+git clone https://huggingface.co/datasets/LinYuanMo/TextHalu-Bench
 ```
 
-### AMBER
-- Generate the MLLM's responses and save them in a jsonl file:
+- Replace the models' initiation and inference process and evaluate them.
 ```bash
-python amber_llava.py
+python eval/eval_texthalubench.py
 ```
 
-- Calculate metric score using the generated jsonl file:
+### STVQA
+
+- Download the STVQA annotations file in [here] and evaluate it using the your inference outcome file:
 ```bash
-python inference.py
+python eval/eval_stvqa.py
 ```
 
 
+### VLMKIT
+
+We use [Vlmkit] to evaluate the TextVQA OCRVQA SEEDBench AI2D.
 
 
-### POPE
-```bash
-python pope_eval.py 
-```
-### MME
-```bash
-python mme_llava.py
-```
+
+
 ###  Experiment's Results
 
+<p align="center"><img src="img/method.png" alt="teaser" width="500px" /></p>
 
-## Reference Repositories
-- DoLa: https://github.com/voidism/DoLa
-- OPERA: https://github.com/shikiw/OPERA
-- VCD: https://github.com/DAMO-NLP-SG/VCD
-- LLaVA: https://github.com/haotian-liu/LLaVA
-- MiniGPT4: https://github.com/Vision-CAIR/MiniGPT-4
