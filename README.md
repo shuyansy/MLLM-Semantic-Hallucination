@@ -7,8 +7,8 @@
 [![GitHub Stars](https://img.shields.io/github/stars/shikiw/OPERA?style=social)](https://github.com/shikiw/OPERA/stargazers) -->
 
 <p align="center">
-  <a href="https://www.arxiv.org/abs/2410.11779">📄arXiv</a> •
-  <a href="https://huggingface.co/papers/2410.11779">🤗HFPaper</a> •
+  <a href="">📄arXiv</a> •
+  <a href="">🤗HFPaper</a> •
 </p>
 
 
@@ -35,54 +35,34 @@ This repository provides the official PyTorch implementation of the following pa
 We follow the official inplement of [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL) and replace the transformer use following code.
 
 ```
-pip install git+https://github.com/shuyansy/MLLM-Semantic-Hallucination/tree/master/Qwen/transformers.git
+cd MLLM-Semantic-Hallucination/Qwen
+pip install .
 ```
 
 ### MiniMonkey
 
-We follow the official inplement of[MiniMonkey](https://github.com/Yuliang-Liu/Monkey/tree/main/project/mini_monkey) and download their [official weight](https://huggingface.co/mx262/MiniMonkey).Then we replace their code modeling_internlm2.py and modeling_minimonkey_chat.py with code [here](https://github.com/shuyansy/MLLM-Semantic-Hallucination/tree/master/minimonkey)
+We follow the official inplement of [MiniMonkey](https://github.com/Yuliang-Liu/Monkey/tree/main/project/mini_monkey) and download their [official weight](https://huggingface.co/mx262/MiniMonkey).
+Then we replace their code modeling_internlm2.py and modeling_minimonkey_chat.py with code [here](https://github.com/shuyansy/MLLM-Semantic-Hallucination/tree/master/minimonkey)
+
+### LLaVA-NeXT 
+We follow the steps below for inplement of LLaVA-NeXT .
+
 ```
-with torch.no_grad():
-    output_dict = model.generate(
-                    input_ids,
-                    images=image_tensor,
-                    do_sample=args.do_sample
-                    temperature=args.temperature,
-                    top_p=args.top_p,
-                    num_beams=args.num_beams,
-                    max_new_tokens=args.max_new_tokens,
-                    return_dict_in_generate=True,
-                    output_hidden_states=True,
-                    use_deco = True,
-                    alpha = 0.6,
-                    threshold_top_p = 0.9, 
-                    threshold_top_k = 20,
-                    early_exit_layers=[i for i in range(20, 29)]
-                    )
-                
-output_ids = output_dict.sequences
-outputs = tokenizer.batch_decode(output_ids)
+cd llava-next
+conda create -n llava python=3.10 -y
+conda activate llava
+pip install --upgrade pip  # Enable PEP 660 support.
+pip install -e ".[train]"
+pip install .
 ```
-<!-- 
-Please refer to `demo.ipynb` [here](https://github.com/shikiw/OPERA/blob/1e74d8b5d082579c81e0e77ef1cf4a44d20ab91e/demo.ipynb) for more details. -->
+
 
 
 ## Evaluation
 
-The following evaluation requires for MSCOCO 2014 dataset. Please download [here](https://cocodataset.org/#home) and extract it in your data path.
 
+### TextHalu-Bench
 
-### Arguments
-
-| Argument             | Example             | Description   |
-| -------------------- | ------------------- | ------------- |
-| `--data-path`     | `/path/to/dataset` | Path to the dataset file or folder, e.g., `COCO_2014/val2014/`. |
-| `--alpha`   | `0.5` | The scale factor to scale up the calibration strength. |
-| `--threshold_top_p`      | `0.9` | The threshold for controlling the number of candidate tokens. |
-| `--early-exit-layers`   | `range(20,29)` | The candidate layer interval can be adjusted appropriately according to the model. |
-
-
-### CHAIR
 - Generate the MLLM's responses and save them in a jsonl file:
 ```bash
 python chair_llava.py
@@ -116,25 +96,8 @@ python pope_eval.py
 ```bash
 python mme_llava.py
 ```
-### Additional Experiment's Results
-We compare the baseline, DoLa, DeCo, and the combination of DoLa and DeCo on the LLM benchmark, such as StrategyQA and GSM8K, using llama-7b.
+###  Experiment's Results
 
-| Method            | StrategyQA             | GSM8K   |
-| -------------------- | ------------------- | ------------- |
-| baseline    | 59.8 | 10.8 |
-| DoLa   | 64.1 | 10.5 |
-| DeCo      | 61.2 | 10.2 |
-| DoLa+DeCo   | 60.0 | 9.6 |
-
-
-We compare the baseline, DoLa, DeCo, and the combination of DoLa and DeCo on CHAIR, using llava-v1.5-7b.
-
-| Method            | CHAIRs             | CHAIRi   |
-| -------------------- | ------------------- | ------------- |
-| baseline    | 45.0 | 14.7 |
-| DoLa   | 47.8 | 13.8 |
-| DeCo      | 37.8 | 11.1 |
-| DoLa+DeCo   | 44.2 | 11.9 |
 
 ## Reference Repositories
 - DoLa: https://github.com/voidism/DoLa
