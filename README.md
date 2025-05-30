@@ -33,12 +33,10 @@ This repository provides the official PyTorch implementation of the following pa
 
 ### Qwen2.5-VL
 
-We follow the official inplement of [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL) and replace the transformer with ours.
+We follow the official inplement of [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL) and replace the transformer use following code.
 
 ```
-conda create -n deco python==3.9
-conda activate deco
-pip install -r requirements.txt
+pip install git+https://github.com/shuyansy/MLLM-Semantic-Hallucination/Qwen/transformers.git
 ```
 
 ## TL;DR
