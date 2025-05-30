@@ -75,7 +75,7 @@ python eval/eval_texthalubench.py
 
 ### STVQA
 
-- Download the STVQA annotations file in [here] and evaluate it using the your inference outcome file:
+- Download the STVQA annotations file in [here](https://rrc.cvc.uab.es/?ch=11) and evaluate it using the your inference outcome file:
 ```bash
 python eval/eval_stvqa.py
 ```
