@@ -9,7 +9,6 @@
 <p align="center">
   <a href="https://www.arxiv.org/abs/2410.11779">📄arXiv</a> •
   <a href="https://huggingface.co/papers/2410.11779">🤗HFPaper</a> •
-  <a href="https://notebooklm.google.com/notebook/e41ab929-0cf5-45d2-a5b7-c3c109e2baac/audio">🎧NotebookLM Audio</a>
 </p>
 
 
@@ -36,11 +35,12 @@ This repository provides the official PyTorch implementation of the following pa
 We follow the official inplement of [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL) and replace the transformer use following code.
 
 ```
-pip install git+https://github.com/shuyansy/MLLM-Semantic-Hallucination/Qwen/transformers.git
+pip install git+https://github.com/shuyansy/MLLM-Semantic-Hallucination/tree/master/Qwen/transformers.git
 ```
 
-## TL;DR
-After setup the environment, you can directly use Deco on your own MLLM model by:
+### MiniMonkey
+
+We follow the official inplement of[MiniMonkey](https://github.com/Yuliang-Liu/Monkey/tree/main/project/mini_monkey) and download their [official weight](https://huggingface.co/mx262/MiniMonkey).Then we replace their code modeling_internlm2.py and modeling_minimonkey_chat.py with code [here](https://github.com/shuyansy/MLLM-Semantic-Hallucination/tree/master/minimonkey)
 ```
 with torch.no_grad():
     output_dict = model.generate(
