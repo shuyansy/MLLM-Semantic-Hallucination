@@ -7,8 +7,8 @@
 [![GitHub Stars](https://img.shields.io/github/stars/shikiw/OPERA?style=social)](https://github.com/shikiw/OPERA/stargazers) -->
 
 <p align="center">
-  <a href="https://www.arxiv.org/abs/2410.11779">📄arXiv</a> •
-  <a href="https://huggingface.co/papers/2410.11779">🤗HFPaper</a> •
+  <a href="https://arxiv.org/abs/2506.05551">📄arXiv</a> •
+  <a href="https://huggingface.co/papers/2506.05551">🤗HFPaper</a> •
 </p>
 
 
