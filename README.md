@@ -7,8 +7,8 @@
 [![GitHub Stars](https://img.shields.io/github/stars/shikiw/OPERA?style=social)](https://github.com/shikiw/OPERA/stargazers) -->
 
 <p align="center">
-  <a href="">📄arXiv</a> •
-  <a href="">🤗HFPaper</a> •
+  <a href="https://www.arxiv.org/abs/2410.11779">📄arXiv</a> •
+  <a href="https://huggingface.co/papers/2410.11779">🤗HFPaper</a> •
 </p>
 
 
@@ -92,3 +92,18 @@ We use [Vlmkit](https://github.com/open-compass/VLMEvalKit) to evaluate the Text
 
 <p align="center"><img src="image/experiment.png" alt="teaser" width="800px" /></p>
 
+
+
+## Citation
+If you find this work useful for your research, please cite [our paper](https://arxiv.org/abs/2410.11779):
+```
+@misc{shu2025semanticsmisleadvisionmitigating,
+      title={When Semantics Mislead Vision: Mitigating Large Multimodal Models Hallucinations in Scene Text Spotting and Understanding}, 
+      author={Yan Shu and Hangui Lin and Yexin Liu and Yan Zhang and Gangyan Zeng and Yan Li and Yu Zhou and Ser-Nam Lim and Harry Yang and Nicu Sebe},
+      year={2025},
+      eprint={2506.05551},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2506.05551}, 
+}
+```
