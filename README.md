@@ -128,6 +128,14 @@ output_text = processor.batch_decode(
 print(output_text)
 ```
 
+### MiniMonkey
+
+We use their original official [demo](https://huggingface.co/mx262/MiniMonkey/blob/main/demo.py).
+
+### LLaVA-NeXT 
+
+We use their original official [demo](https://github.com/LLaVA-VL/LLaVA-NeXT/blob/main/docs/LLaVA-NeXT.md).
+
 ## Evaluation
 
 
