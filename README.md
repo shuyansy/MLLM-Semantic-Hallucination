@@ -173,7 +173,7 @@ We use [Vlmkit](https://github.com/open-compass/VLMEvalKit) to evaluate the Text
 
 
 ## Citation
-If you find this work useful for your research, please cite [our paper](https://arxiv.org/abs/2410.11779):
+If you find this work useful for your research, please cite [our paper](https://arxiv.org/abs/2506.05551):
 ```
 @misc{shu2025semanticsmisleadvisionmitigating,
       title={When Semantics Mislead Vision: Mitigating Large Multimodal Models Hallucinations in Scene Text Spotting and Understanding}, 
