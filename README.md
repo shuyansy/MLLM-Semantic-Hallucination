@@ -59,9 +59,9 @@ pip install .
 
 ##  Quickstart
 
-After setup the environment, you can directly use Deco on your own MLLM model by:
+After setup the environment, you can directly use our method on MLLMs model by:
 
-###Qwen2.5-VL
+### Qwen2.5-VL
 
 ```
 from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor
