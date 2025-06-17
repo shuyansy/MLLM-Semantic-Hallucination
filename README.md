@@ -9,6 +9,7 @@
 <p align="center">
   <a href="https://arxiv.org/abs/2506.05551">📄arXiv</a> •
   <a href="https://huggingface.co/papers/2506.05551">🤗HFPaper</a> •
+  <a href="https://huggingface.co/datasets/sy1998/TextHalu-Bench">🤗TextHalu-Bench</a> •
 </p>
 
 
