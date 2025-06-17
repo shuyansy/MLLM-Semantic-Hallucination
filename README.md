@@ -179,6 +179,6 @@ If you find this work useful for your research, please cite [our paper](https://
   title={When Semantics Mislead Vision: Mitigating Large Multimodal Models Hallucinations in Scene Text Spotting and Understanding},
   author={Shu, Yan and Lin, Hangui and Liu, Yexin and Zhang, Yan and Zeng, Gangyan and Li, Yan and Zhou, Yu and Lim, Ser-Nam and Yang, Harry and Sebe, Nicu},
   journal={arXiv preprint arXiv:2506.05551},
-  year={2025}
+  year={2025},
 }
 ```
