@@ -175,13 +175,10 @@ We use [Vlmkit](https://github.com/open-compass/VLMEvalKit) to evaluate the Text
 ## Citation
 If you find this work useful for your research, please cite [our paper](https://arxiv.org/abs/2506.05551):
 ```
-@misc{shu2025semanticsmisleadvisionmitigating,
-      title={When Semantics Mislead Vision: Mitigating Large Multimodal Models Hallucinations in Scene Text Spotting and Understanding}, 
-      author={Yan Shu and Hangui Lin and Yexin Liu and Yan Zhang and Gangyan Zeng and Yan Li and Yu Zhou and Ser-Nam Lim and Harry Yang and Nicu Sebe},
-      year={2025},
-      eprint={2506.05551},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2506.05551}, 
+@article{shu2025semantics,
+  title={When Semantics Mislead Vision: Mitigating Large Multimodal Models Hallucinations in Scene Text Spotting and Understanding},
+  author={Shu, Yan and Lin, Hangui and Liu, Yexin and Zhang, Yan and Zeng, Gangyan and Li, Yan and Zhou, Yu and Lim, Ser-Nam and Yang, Harry and Sebe, Nicu},
+  journal={arXiv preprint arXiv:2506.05551},
+  year={2025}
 }
 ```
