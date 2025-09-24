@@ -1,4 +1,4 @@
-# MLLM-Semantic-Hallucination
+# MLLM-Semantic-Hallucination [NeurIPS 2025]
 
 
 <!-- [![License: MIT](https://img.shields.io/badge/License-MIT-g.svg)](https://opensource.org/licenses/MIT)
