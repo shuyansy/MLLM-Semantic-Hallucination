@@ -142,15 +142,15 @@ We use their original official [demo](https://github.com/LLaVA-VL/LLaVA-NeXT/blo
 
 ### TextHalu-Bench
 
-- Download the TexHalu-Bench in ./eval and unzip it.
+- We have applied the test code to [VLMEvalKit](https://github.com/open-compass/VLMEvalKit).You can test our benchmark using following code：
 ```bash
-git clone https://huggingface.co/datasets/LinYuanMo/TextHalu-Bench
+git clone https://github.com/open-compass/VLMEvalKit.git
+conda activate your-env
+cd VLMEvalKit
+pip install -e .
+python run.py  --data  TextHaluBench  --model Qwen2.5-VL-3B-Instruct  --verbose
 ```
 
-- Replace the models' initiation and inference process and evaluate them.
-```bash
-python eval/eval_texthalubench.py
-```
 
 ### STVQA
 
@@ -160,9 +160,9 @@ python eval/eval_stvqa.py
 ```
 
 
-### VLMKIT
+### TextVQA OCRVQA SEEDBench AI2D
 
-We use [Vlmkit](https://github.com/open-compass/VLMEvalKit) to evaluate the TextVQA OCRVQA SEEDBench AI2D.
+We also use [VLMEvalKit](https://github.com/open-compass/VLMEvalKit) to evaluate the TextVQA OCRVQA SEEDBench AI2D.
 
 
 
